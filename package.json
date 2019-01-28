@@ -1,0 +1,29 @@
+{
+  "name": "snickercity",
+  "version": "1.0.0",
+  "description": "A coding exercise for BK digital recruitment consisting of an ecommerce app for selling snickers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Snicker",
+    "City"
+  ],
+  "author": "Kagabo Mwungutsi Cedric",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dateformat": "^3.0.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "express-flash": "0.0.2",
+    "express-myconnection": "^1.0.4",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.15.6",
+    "fileupload": "^1.0.0",
+    "mysql": "^2.16.0",
+    "random-token": "0.0.8"
+  }
+}

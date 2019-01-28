@@ -1,0 +1,118 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-sacale=1" >
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/bower_components/dist/css/bootstrap-theme.min.css">
+ <script src="/bower_components/jquery/jquery.slim.min.js" ></script>
+ <script src="/bower_components/bootstrap/js/bootstrap.min.js"></script>
+ <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="">
+
+  <a href="/"><h1>Snicker City</h1></a>
+<form class="form-horizontal" action="/admin/upload" method="post" enctype="multipart/form-data">
+              <% if (messages.error) { %>
+                     <p style="color:red;text-align:center"><%- messages.error %></p>
+                    <%}%>
+                    <% if(messages.success) {  %>
+                      <p style="color:green;text-align:center"><%- messages.success %></p>
+                      <%}%>
+                      <% if(messages.info){%>
+                      <p style="color:blue;text-align:center"><%- messages.info %></p>
+                      <%}%>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Upload a new Snicker</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Snicker Model</label>
+  <div class="col-md-4">
+  <input id="textinput" name="model" type="text" placeholder="placeholder" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="desc">Description</label>
+  <div class="col-md-4">
+    <textarea class="form-control" id="desc" name="desc"></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="releaseDate">Release Date</label>
+  <div class="col-md-4">
+  <input id="releaseDate" name="releaseDate" type="date" placeholder="placeholder" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Button Drop Down -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="categ">category</label>
+  <div class="col-md-4">
+    <div class="input-group">
+
+          <select id="category" name="category" class="form-control">
+            <option value="">Choose category</option>
+            <option value="Kids">kids</option>
+            <option value="Men">Men</option>
+             <option value="Women">Women</option>
+
+          </select>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="price">Price</label>
+  <div class="col-md-4">
+  <input id="price" name="price" type="text" placeholder="" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- File Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="pic2">pic2</label>
+  <div class="col-md-4">
+    <input id="pic2" name="pic2" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- File Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="pic1">Pic1</label>
+  <div class="col-md-4">
+    <input id="pic1" name="pic1" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- File Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="pic3">pic3</label>
+  <div class="col-md-4">
+    <input id="pic3" name="pic3" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button type="submit" id="" name="" class="btn btn-primary">Upload the snicker</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</body>

@@ -1,0 +1,35 @@
+<%- include Layouts/header.ejs %>
+
+<h1>We are comming</h1>
+
+
+<div class="row" >
+
+      <!--Begining of the snicker display -->
+       <%if(snickers){%>
+            <%snickers.forEach(function(snicker){%>
+              <div class='col-sm-2'>
+                 <div class='product-image-wrapper'>
+       <a href="/details/<%-snicker.productName%>/<%-snicker.productID%>">
+      <div class="w3-card2" style="width:260px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;margin-top:10%;">
+        <img class="card-img-top" src="images/<%-snicker.pic1 %>" alt="Card image" style="width:100%;">
+        <div class="card text-white bg-info mb-3" >
+          <h4 class="card-title" style="text-align:center;"><b><%-snicker.productName %>"</b></h4>
+          <p class="card-text" style="color:black"><%-snicker.model %></p>
+          <p class="card-text" style="color:white">Release Date:<b><%-format(snicker.releaseDate,'dd-mmm-yyyy')%></b></p>
+          <center><label for=""><span><%-snicker.price%> Frw</span></label></center>
+        </div>
+      </div>
+      <br>
+    </a>
+  </div>
+  </div>
+   <%})%>
+  <%}%>
+
+
+    <!--End of the shop display -->
+
+
+
+  </div>
