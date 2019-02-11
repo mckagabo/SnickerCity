@@ -33,7 +33,7 @@ app.use(session({
 }))
 
 
-app.listen(7000)
+app.listen(7001)
 app.use(myConnection(mysql,dbOptions,'pool'));
 app.use('/',index)
-console.log('Yupiiii The server is started and listening on port:7000 :)')
+console.log('Yupiiii The server is started and listening on port:7001 :)')

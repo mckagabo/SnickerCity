@@ -44,12 +44,18 @@ function howManyItems(sessionID){
   return new Promise(function(resolve,reject){
     pool.getConnection(function(err,connection){
       if(err)reject(err);
-      connection.query('select sum(quantity) as total from cart where sessionID=?',sessionID,function(error,results){
+      connection.query('select sum(quantity) as total from cart where sessionID=?',sessionID,function(error,rows,fields){
         connection.release();
         if(error){
           reject(error);
+          //resolve('0')
         }else{
-          resolve(results);
+          //resolve(results);
+          if(rows.length>0){
+            resolve(rows);
+          }else{
+            resolve(0);
+          }
         }
       })
     })

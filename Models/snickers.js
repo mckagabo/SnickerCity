@@ -20,11 +20,12 @@ function addSnicker(shoe){
   })
 }
 
+
 function getShoes(){
         return new Promise(function(resolve,reject){
           pool.getConnection(function(err,connection){
             if(err)reject(err);
-            connection.query('select * from product',function(err,results){
+            connection.query('select * from product order by releaseDate desc',function(err,results){
                connection.release();
               if(err){
                 reject(err);
@@ -54,6 +55,24 @@ function getShoes(){
         })
       })
   }
+  function shoeByDate(releaseDate){
+     return new Promise(function(resolve,reject){
+       pool.getConnection(function(error,connection){
+         if(error)reject(error);
+         connection.query('select * from product where releaseDate=?',[releaseDate],function(err,rows,fields){
+           connection.release();
+           if(err)reject(err);
+           if(rows.length>0){
+              resolve(rows);
+           }else{
+             reject(rows);
+           }
+         })
+       })
+     })
+  }
+
+module.exports.snickD=shoeByDate;
 module.exports.addShoe=addSnicker;
 module.exports.allShoes=getShoes;
 module.exports.shoeDtails=oneShoe;

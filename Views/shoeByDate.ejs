@@ -1,14 +1,14 @@
 <%- include Layouts/header.ejs %>
-
-<h1>We are comming</h1>
-
-
+<br>
+<br>
+<br>
+<br>
 <div class="row" >
 
       <!--Begining of the snicker display -->
        <%if(snickers){%>
             <%snickers.forEach(function(snicker){%>
-              <div class='col-sm-3'>
+              <div class='col-sm-2'>
                  <div class='product-image-wrapper'>
        <a href="/details/<%-snicker.productName%>/<%-snicker.productID%>">
       <div class="w3-card2" style="width:260px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;margin-top:10%;">
@@ -25,9 +25,22 @@
   </div>
   </div>
    <%})%>
+  <%}else{%>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center><h1 style="text-align:center"><hr>Sorry No snicker Release by that date!</<h1></center>
   <%}%>
-
-
     <!--End of the shop display -->
 
 
